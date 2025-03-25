@@ -10,5 +10,7 @@ const PORT = process.env.PORT || 3500
 //serve static assets from root to /public dir
 app.use('/', express.static(path.join(__dirname, '/public')))
 
+app.use('/', require('./routes/root'))
+
 //app starts server and console log when successful
 app.listen(PORT, () => console.log(`SErver running on port ${PORT}`))
