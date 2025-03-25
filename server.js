@@ -7,10 +7,17 @@ const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3500
 
+const { logger } = require('./middleware/logger') 
+
+app.use(logger)
+
+
 //serve static assets from root to /public dir
 app.use('/', express.static(path.join(__dirname, '/public')))
 
 app.use('/', require('./routes/root'))
+
+app.use(express.json())
 
 //routed to 404.html if not found 
 app.all('*', (req, res) => {
@@ -25,4 +32,4 @@ app.all('*', (req, res) => {
 })
 
 //app starts server and console log when successful
-app.listen(PORT, () => console.log(`SErver running on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
