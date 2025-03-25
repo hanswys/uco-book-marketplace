@@ -1,0 +1,28 @@
+{
+  "name": "uco-book-marketplace",
+  "version": "1.0.0",
+  "description": "Broncho Books MERN Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanswys/uco-book-marketplace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hanswys/uco-book-marketplace/issues"
+  },
+  "homepage": "https://github.com/hanswys/uco-book-marketplace#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
