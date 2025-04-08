@@ -25,7 +25,7 @@ const bookSchema = new mongoose.Schema(
             required: true
         },
         sold: {
-            type: Boolean,
+            type: String,
             default: false
         }
     },
@@ -34,7 +34,7 @@ const bookSchema = new mongoose.Schema(
     }
 )
 
-noteSchema.plugin(AutoIncrement, {
+bookSchema.plugin(AutoIncrement, {
     inc_field: 'ticket',
     id: 'ticketNums',
     start_seq: 500
