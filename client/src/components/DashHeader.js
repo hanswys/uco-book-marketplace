@@ -1,18 +1,22 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import React from 'react';
+import logo from '../img/uco-logo.png';
+import profileIcon from '../img/profile-icon.png';
 
 
 const DashHeader = () => {
     const content = (
-        <header className="dash-header">
-            <div className="dash-header__container">
-                <Link to="/dash">
-                    <h1 className="dash-header__title">techNotes</h1>
-                </Link>
-                <nav className="dash-header__nav">
-                    {/* add nav buttons later */}
-                </nav>
-            </div>
-        </header>
+        <div className="header-container">
+      <div className="logo-title">
+        <img src={logo} alt="UCO Logo" />
+        <h1>Broncho Books</h1>
+      </div>
+      <div className="user-info">
+        <h3>Guest User</h3>
+        <img src={profileIcon} alt="Profile Icon" />
+        <button>+</button>
+      </div>
+    </div>
     )
 
     return content
