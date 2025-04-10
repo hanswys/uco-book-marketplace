@@ -33,6 +33,7 @@
 .body-container{
   display: flex;
   flex-direction: row;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
 }
 
 .filter-bar{
@@ -65,4 +66,8 @@ img{
   width: 60px;
   height: 60px;
   padding: 20px;
+}
+
+h1, h3{
+  color: #f3DC2D;
 }
