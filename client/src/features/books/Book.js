@@ -22,8 +22,8 @@ const Book = ({ bookId }) => {
             <tr className="table__row">
                 <td className="table__cell book__status">
                     {book.completed
-                        ? <span className="book__status--completed">Completed</span>
-                        : <span className="book__status--open">Open</span>
+                        ? <span className="book__status--completed">Sold</span>
+                        : <span className="book__status--open">Available</span>
                     }
                 </td>
                 <td className="table__cell book__title">{book.title}</td>

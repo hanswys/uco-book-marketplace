@@ -29,6 +29,7 @@ const BooksList = () => {
             <table className="table table--books">
                 <thead className="table__thead">
                     <tr>
+                        <th scope="col" className="table__th book__status">Status</th>
                         <th scope="col" className="table__th book__title">Title</th>
                         <th scope="col" className="table__th book__username">Owner</th>
                         <th scope="col" className="table__th book__created">Created</th>

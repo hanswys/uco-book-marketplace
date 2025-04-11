@@ -27,22 +27,17 @@ const getAllBooks = asyncHandler(async (req, res) => {
 // @route POST /users
 // @access Private
 const createNewBook = asyncHandler(async (req, res) => {
-    const { user, title, price, condition, category, sold } = req.body
+    const { user, title, price, condition} = req.body
 
     // Confirm data
-    if (!user || !title || !price || !condition || !category || !sold) {
+    if (!user || !title || !price || !condition) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
-    // // // Check for duplicate username
-    // const duplicate = await Book.findOne({ title }).lean().exec()
-
-    // if (duplicate) {
-    //     return res.status(409).json({ message: 'Duplicate book title' })
-    // }
+    let sold = "no"
 
     // Create and store new user 
-    const book = await Book.create({user, title, price, condition, category, sold})
+    const book = await Book.create({user, title, price, condition, sold})
 
     if (book) { //created 
         res.status(201).json({ message: `New book created` })
@@ -58,7 +53,7 @@ const updateBook = asyncHandler(async (req, res) => {
     const { id, user, title, price, condition, category, sold } = req.body
 
     // Confirm data 
-    if (!user || !title || !price || !condition || !category || !sold) {
+    if (!user || !title || !price || !condition|| !sold) {
         return res.status(400).json({ message: 'All fields are required' })
     }
 
