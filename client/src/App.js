@@ -3,6 +3,7 @@ import AddBook from "./features/AddBook";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import UsersList from "./features/users/UsersList";
+import BooksList from "./features/books/BooksList";
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
 
         <Route path="users">
             <Route index element={<UsersList />} />
+          </Route>
+
+          <Route path="books">
+            <Route index element={<BooksList />} />
           </Route>
 
       </Route>
