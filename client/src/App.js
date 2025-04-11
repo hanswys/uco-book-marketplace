@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import AddBook from "./features/AddBook";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
-import Welcome from "./features/auth/Welcome";
 
 function App() {
   return (

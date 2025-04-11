@@ -6,14 +6,25 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const content = (
-        <div className="header-container">
-          <div className="logo-title">
+      <div className="header-container">
+          <Link to ="/" className="logo-title">
             <img src={logo} alt="UCO Logo" />
             <h1>Broncho Books</h1>
-          </div>
+          </Link>
+          <div className="search-bar" style={{ flexGrow: 1, margin: '0 2rem' }}>
+        <input
+          type="text"
+          placeholder="Search books..."
+          style={{
+            width: '100%',
+            padding: '0.5rem 1rem',
+            borderRadius: '20px',
+            border: '1px solid #ccc'
+          }}
+        />
+      </div>
           <div className="user-info">
             <h3>Guest User</h3>
-            <img src={profileIcon} alt="Profile Icon" />
             <Link to="/addbook">
               <button>Add Book</button>
             </Link>

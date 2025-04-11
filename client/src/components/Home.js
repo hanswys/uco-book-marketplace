@@ -6,9 +6,9 @@ import { Outlet } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="body-container">
-    <FilterBar />
+    {/* <FilterBar /> */}
     <Catalogue />
-    <Outlet /> {/* Render child routes like AddBook here */}
+    <Outlet /> 
   </div>
   )
 }
